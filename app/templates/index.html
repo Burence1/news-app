@@ -1,0 +1,23 @@
+{% extends 'base.html'%}
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="utf-8">
+  {% if title %}
+  <title> {{ title }}</title>
+  {% else %}
+  <title> Best News Application </title>
+  {% endif %}
+</head>
+
+<body>
+  {% block content %}
+  <div>
+    <h3> Latest Articles</h3>
+    {{ macro.displayArticleList(Latest)}}
+  </div>
+  {% endblock%}
+</body>
+
+</html>

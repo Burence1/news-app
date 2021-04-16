@@ -20,5 +20,6 @@ def index():
 def articles(publishedAt):
   articles = get_article(publishedAt)
   title = f'{article_item.title}'
+  latest = publishedAt
 
-  return render_template('.index',title=title)
+  return render_template('.index',title=title,latest=publishedAt)

@@ -6,14 +6,15 @@ class Config:
   General Configurations, parent class
   '''
 
-  NEWS_API_BASE_URL = 'http://newsapi.org/v2/sources?&apiKey={}'
-  SEARCH_API_BASE_URL = 'https://newsapi.org/v2/everything?q={}&sortBy=relevancy,publishedAt&pageSize=30&apiKey={}'
-  TOP_HEADLINES_BASE_URL = 'http://newsapi.org/v2/top-headlines?sources={}&apiKey={}'
-  BREAKING_NEWS_BASE_URL = 'http://newsapi.org/v2/top-headlines?country=us&category=general&apiKey={}'
+  SOURCE_API_BASE_URL = 'https://newsapi.org/v2/sources?language=en&category={}&apiKey={}'
+  EVERYTHING_SOURCE_BASE_URL = 'https://newsapi.org/v2/everything?sources={}&pageSize={}&apiKey={}'
+  TOP_HEADLINES_BASE_URL = 'https://newsapi.org/v2/top-headlines?language=en&pageSize={}&apiKey={}'
+  EVERYTHING_BASE_URL = 'https://newsapi.org/v2/everything?sources=bbc-news,al-jazeera-english,cnn,independent,google-news,the-telegraph,mashable,the-lad-bible,buzzfeed,bloomberg,engadget,espn,fortune&sortBy=publishedAt&pageSize={}&apiKey={}'
+  SEARCH_API_BASE_URL = 'https://newsapi.org/v2/everything?language=en&q={}&apiKey={}'
   NEWS_API_KEY = os.environ.get('NEWS_API_KEY')
   SECRET_KEY = os.environ.get('SECRET_KEY')
 
-class prodConfig(Config):
+class ProdConfig(Config):
   '''
   production configuration child class
 
@@ -31,7 +32,6 @@ class DevConfig(Config):
       Config: The parent configuration class with General configuration settings
   '''
   DEBUG = True
-
 
 config_options = {
     'development': DevConfig,

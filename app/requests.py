@@ -4,23 +4,26 @@ from .models import Sources,Article
 api_key = None
 base_url = None
 search_url = None
-top_headlines_url = None
-breaking_url = None
+article_url = None
+topheadline_url = None
+everything_url = None
 
 
 def configure_request(app):
-  global api_key,base_url,search_url,top_headlines_url,breaking_url
-  search_url = app.config['SEARCH_API_BASE_URL']
-  top_headlines_url = app.config['TOP_HEADLINES_BASE_URL']
-  breaking_url = app.config['BREAKING_NEWS_BASE_URL']
+  global api_key,base_url,search_url,topheadline_url,article_url,everything_url
   api_key = app.config['NEWS_API_KEY']
-  base_url = app.config['NEWS_API_BASE_URL']
+  base_url = app.config["SOURCE_API_BASE_URL"]
+  article_url = app.config["EVERYTHING_SOURCE_BASE_URL"]
+  topheadline_url = app.config["TOP_HEADLINES_BASE_URL"]
+  everything_url = app.config["EVERYTHING_BASE_URL"]
+  search_url = app.config["SEARCH_API_BASE_URL"]
 
 def get_source(category):
   '''
   Gets json response to our url request
   '''
   get_source_url = base_url.format(category,api_key)
+  print(get_source_url)
 
   with urllib.request.urlopen(get_source_url) as url:
     get_source_data = url.read()
@@ -62,7 +65,7 @@ def get_articles(source_id,limit):
   '''
   gets json response to our url request
   '''
-  get_articles_url = base_url.format(source_id,limit,api_key)
+  get_articles_url = article_url.format(source_id,limit,api_key)
 
   with urllib.request.urlopen(get_articles_url) as url:
     get_articles_data = url.read()
@@ -105,7 +108,7 @@ def get_top_headlines(limit):
   '''
   gets json response to our url request
   '''
-  get_top_headlines_url = top_headlines_url.format(limit,api_key)
+  get_top_headlines_url = topheadline_url.format(limit,api_key)
 
   with urllib.request.urlopen('get_top_headlines_url') as url:
     get_headlines_data = url.read()
@@ -124,7 +127,7 @@ def get_all_articles(limit):
   '''
   gets json response to our url request
   '''
-  all_articles_url = base_url.format(limit,api_key)
+  all_articles_url = everything_url.format(limit,api_key)
 
   with urllib.request.urlopen(all_articles_url) as url:
     all_articles_data = url.read()

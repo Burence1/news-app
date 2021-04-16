@@ -1,4 +1,5 @@
-{% extends 'base.html'%}
+{% extends 'base.html' %}
+{% import 'macros.html' as macro %}
 <!DOCTYPE html>
 <html>
 
@@ -10,14 +11,50 @@
   <title> Best News Application </title>
   {% endif %}
 </head>
-
 <body>
   {% block content %}
-  <div>
-    <h3> Latest Articles</h3>
-    {{ macro.displayArticleList(Latest)}}
+  <div class="container wrapper scroll">
+    <div class="row" id="business">
+      <div class="category col-md-12">
+        <h4 class="source_title">Business</h4>
+        <ul>
+          {{macro.displaysourceList(business)}}
+        </ul>
+      </div>
+    </div>
+    <div class="row" id="technology">
+      <div class="category col-md-12">
+        <h4 class="source_title">Technology</h4>
+        <ul>
+          {{macro.displaysourceList(technology)}}
+        </ul>
+      </div>
+    </div>
+    <div class="row" id="sports">
+      <div class="category col-md-12">
+        <h4 class="source_title">Sports</h4>
+        <ul>
+          {{macro.displaysourceList(sports)}}
+        </ul>
+      </div>
+    </div>
+    <div class="row" id="entertainment">
+      <div class="category col-md-12">
+        <h4 class="source_title">Entertainment</h4>
+        <ul>
+          {{macro.displaysourceList(entertainment)}}
+        </ul>
+      </div>
+    </div>
+    <div class="row" id="science">
+      <div class="category col-md-12">
+        <h4 class="source_title">Science</h4>
+        <ul>
+          {{macro.displaysourceList(science)}}
+        </ul>
+      </div>
+    </div>
   </div>
   {% endblock%}
 </body>
-
 </html>

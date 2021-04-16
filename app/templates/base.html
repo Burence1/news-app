@@ -1,4 +1,16 @@
 {% extends 'bootstrap/base.html'%} 
-{% block navbar %} 
-{% include 'navbar.html' %} 
+
+{% block styles%} {{ super() }}
+<link rel="stylesheet" href="{{url_for('static',filename='css/index.css')}}"> 
 {% endblock %}
+
+<!--navbar-->
+{% block navbar %} 
+{% include 'nav.html' %} 
+{% endblock %}
+
+
+<!-- {% block scripts %} {{super()}}
+<script src="{{url_for('.static',filename='js/navbar.js')}}"></script>
+<script src="{{url_for('.static',filename='js/search.js')}}"></script>
+{% endblock %} -->

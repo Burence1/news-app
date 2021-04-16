@@ -15,7 +15,6 @@ def index():
   entertainment_source = get_source('entertainment')
   science_source = get_source('science')
   sports_source = get_source('sports')
-  religion_source = get_source('religion')
 
   title = 'Best news app'
 
@@ -24,7 +23,7 @@ def index():
   if search_article:
     return redirect(url_for('.search',article_name=search_article))
   else:
-    return render_template('index.html' title=title,technology=technology_source,business=business_source,science=science_source,
+    return render_template('index.html', title=title,technology=technology_source,business=business_source,science=science_source,
     religion=religion_source,sports=sports_source,entertainment=entertainment_source)
 
 
@@ -45,7 +44,7 @@ def articles(source_id,per_page):
     return render_template('articles.html', title=title, name=source_id,articles=article_source)
 
 
-@main.route('/top_headlines&<int:per_page>')
+@main.route('/stories/<int:per_page>')
 def top_stories(per_page):
   '''
   view function for top stories
@@ -62,7 +61,7 @@ def top_stories(per_page):
     return render_template('topstories.html',title=title,name='Top Stories',articles=top_stories_articles)
 
 
-@main.route('/all_articles&<int:per_page>')
+@main.route('/stories/<int:per_page>')
 def all_stories(per_page):
   '''
   view function for all stories
@@ -75,10 +74,10 @@ def all_stories(per_page):
   if search_article:
     return redirect(url_for('.search',article_name=search_article))
   else:
-    return render_template('allstories.html',title=title, name=All Stories,articles = all_stories_articles)
+    return render_template('allstories.html',title=title, name='All Stories',articles = all_stories_articles)
 
 
-@main.route('search_article/<article_name>')
+@main.route('/search/<article_name>')
 def search(article_name):
   '''
   view function that displays articles search results

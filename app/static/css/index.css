@@ -1,0 +1,45 @@
+*{
+  font-size:medium;
+}
+#bg{
+   background: hsla(208, 7%, 55%, 1);
+
+background: linear-gradient(90deg, hsla(208, 7%, 55%, 1) 0%, hsla(191, 5%, 40%, 1) 100%);
+
+background: -moz-linear-gradient(90deg, hsla(208, 7%, 55%, 1) 0%, hsla(191, 5%, 40%, 1) 100%);
+
+background: -webkit-linear-gradient(90deg, hsla(208, 7%, 55%, 1) 0%, hsla(191, 5%, 40%, 1) 100%);
+
+filter: progid: DXImageTransform.Microsoft.gradient( startColorstr="#858E96", endColorstr="#60696B", GradientType=1 );
+}
+#sidebar{
+  width: 20em;
+  height: 100%;
+}
+#carousel{
+  height: 15em;
+  width: auto;
+  margin-bottom: 2em;
+}
+.nav-item{
+  margin-left: 3em;
+}
+.source-title{
+  text-align: center;
+}
+.navbar-light{
+  height: 5em;
+}
+.landing {
+  background: hsla(208, 7%, 55%, 1);
+
+background: linear-gradient(90deg, hsla(208, 7%, 55%, 1) 0%, hsla(191, 5%, 40%, 1) 100%);
+
+background: -moz-linear-gradient(90deg, hsla(208, 7%, 55%, 1) 0%, hsla(191, 5%, 40%, 1) 100%);
+
+background: -webkit-linear-gradient(90deg, hsla(208, 7%, 55%, 1) 0%, hsla(191, 5%, 40%, 1) 100%);
+
+filter: progid: DXImageTransform.Microsoft.gradient( startColorstr="#858E96", endColorstr="#60696B", GradientType=1 );
+  height: 10em;
+  color: whitesmoke;
+    }

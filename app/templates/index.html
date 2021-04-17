@@ -11,50 +11,165 @@
   <title> Best News Application </title>
   {% endif %}
 </head>
+
 <body>
   {% block content %}
-  <div class="container wrapper scroll">
-    <div class="row" id="business">
-      <div class="category col-md-12">
-        <h4 class="source_title">Business</h4>
-        <ul>
-          {{macro.displaysourceList(business)}}
-        </ul>
+  <div class="row">
+    <div class="header col-md-3" id="sidebar">
+      <div id="carouselExampleSlidesOnly" class="carousel slide" data-bs-ride="carousel">
+        <div class="carousel-inner">
+          <div class="carousel-item active">
+            <img src="../static/images/1.jpg" class="d-block w-100" alt="...">
+          </div>
+          <div class="carousel-item">
+            <img src="../static/images/2.jpg" class="d-block w-100" alt="...">
+          </div>
+          <div class="carousel-item">
+            <img src="../static/images/3.jpg" class="d-block w-100" alt="...">
+          </div>
+          <div class="carousel-item">
+            <img src="../static/images/4.jpg" class="d-block w-100" alt="...">
+          </div>
+        </div>
       </div>
+      <!-- <a href="/">
+        <h1 class="visible">READ<br>YOUR<br>ARTICLES<br>EACH DAY<br>EVERYDAY</h1>
+      </a> -->
+      <br>
+      <h5>Find an article</h5>
+      <form class="form-group" id="myForm">
+        <input class="form-control mr-sm-2" type="text" name="article_query" placeholder="Search News"
+          aria-label="Search" style="background-color: transparent;" required>
+        <button class="btn my-2 my-sm-0" value="Submit" type="submit">Search</button>
+      </form>
+      <ul class="navbar-nav ml-auto" style="color: black;">
+        <li class="nav-item active">
+          <a class="nav-link" href="/">Home <span class="sr-only">(current)</span></a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="/topheadlines&40">Top News</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="/everything&40">All Stories</a>
+        </li>
+      </ul>
     </div>
-    <div class="row" id="technology">
-      <div class="category col-md-12">
-        <h4 class="source_title">Technology</h4>
-        <ul>
-          {{macro.displaysourceList(technology)}}
-        </ul>
+    <div class="col-md-9">
+      <br>
+      <h1 style="text-align: center;">STAY UPDATED</h1><br>
+      <hr>
+      <br>
+      <div class="row">
+        <div class="col-md-2"></div>
+        <div class="col-md-8">
+          <div class="carousel slide" id="carousel" data-bs-ride="carousel">
+            <div class="carousel-inner">
+              <div class="carousel-item active">
+                <img src="../static/images/1.jpg" class="d-block w-100" alt="...">
+              </div>
+              <div class="carousel-item">
+                <img src="../static/images/2.jpg" class="d-block w-100" alt="...">
+              </div>
+              <div class="carousel-item">
+                <img src="../static/images/3.jpg" class="d-block w-100" alt="...">
+              </div>
+              <div class="carousel-item">
+                <img src="../static/images/4.jpg" class="d-block w-100" alt="...">
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="col-md-2"></div>
       </div>
-    </div>
-    <div class="row" id="sports">
-      <div class="category col-md-12">
-        <h4 class="source_title">Sports</h4>
-        <ul>
-          {{macro.displaysourceList(sports)}}
-        </ul>
-      </div>
-    </div>
-    <div class="row" id="entertainment">
-      <div class="category col-md-12">
-        <h4 class="source_title">Entertainment</h4>
-        <ul>
-          {{macro.displaysourceList(entertainment)}}
-        </ul>
-      </div>
-    </div>
-    <div class="row" id="science">
-      <div class="category col-md-12">
-        <h4 class="source_title">Science</h4>
-        <ul>
-          {{macro.displaysourceList(science)}}
-        </ul>
+      <br>
+      <hr>
+      <div class="card shadow p-3 mb-5 rounded card" id="bg">
+        <div class="container">
+          <!-- Stack the columns on mobile by making one full-width and the other half-width -->
+          <div class="row">
+            <div class="col-md-8">
+              <div class="card shadow p-3 mb-5 bg-white rounded card">
+                <div class="cardbody">
+                  <h4 class="source-title">Sports</h4>
+                  <ul>
+                    {{macro.displaysourceList(sports)}}
+                  </ul>
+                </div>
+              </div>
+              <div class="col-6 col-md-4">
+                <div class="card shadow p-3 mb-5 bg-white rounded card">
+                  <div class="cardbody">
+                    <h4 class="source-title">Technology</h4>
+                    <ul>
+                      {{macro.displaysourceList(technology)}}
+                    </ul>
+                  </div>
+                </div>
+              </div>
+              <!-- Columns start at 50% wide on mobile and bump up to 33.3% wide on desktop -->
+              <div class="row">
+                <div class="col-6 col-md-4">
+                  <div class="card shadow p-3 mb-5 bg-white rounded card">
+                    <div class="cardbody">
+                      <h4 class="source-title">Business</h4>
+                      <ul>
+                        {{macro.displaysourceList(business)}}
+                      </ul>
+                    </div>
+                  </div>
+                  <div class="col-6 col-md-4">
+                    <div class="card shadow p-3 mb-5 bg-white rounded card">
+                      <div class="cardbody">
+                        <h4 class="source-title">General News</h4>
+                        <ul>
+                          {{macro.displaysourceList(general)}}
+                        </ul>
+                      </div>
+                    </div>
+                    <div class="col-6 col-md-4">
+                      <div class="card shadow p-3 mb-5 bg-white rounded card">
+                        <div class="cardbody">
+                          <h4 class="source-title">Entertainment</h4>
+                          <ul>
+                            {{macro.displaysourceList(entertainment)}}
+                          </ul>
+                        </div>
+                      </div>
+                    </div>
+                    <!-- Columns are always 50% wide, on mobile and desktop -->
+                    <div class="row">
+                      <div class="col-6">
+                        <div class="card shadow p-3 mb-5 bg-white rounded card">
+                          <div class="cardbody">
+                            <h4 class="source-title">Science</h4>
+                            <ul>
+                              {{macro.displaysourceList(science)}}
+                            </ul>
+                          </div>
+                        </div>
+                        <div class="col-6">
+                          <div class="card shadow p-3 mb-5 bg-white rounded card">
+                            <div class="cardbody">
+                              <h4 class="source-title">Health</h4>
+                              <ul>
+                                {{macro.displaysourceList(health)}}
+                              </ul>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
       </div>
     </div>
   </div>
+  </div>
   {% endblock%}
 </body>
+
 </html>

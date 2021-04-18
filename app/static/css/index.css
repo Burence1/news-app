@@ -48,3 +48,9 @@ filter: progid: DXImageTransform.Microsoft.gradient( startColorstr="#858E96", en
   width: 100%;
   height: auto;
 }
+
+#myForm{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}

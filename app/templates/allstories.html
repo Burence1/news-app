@@ -2,27 +2,54 @@
 
 {% block content%}
 <!-- Body Section -->
-<div class="container wrapper">
-  <div class="row text">
-    {% for article in articles%}
-    <div class="col-sm-6 col-md-4">
-      <div class="card shadow p-3 mb-5 bg-white rounded card">
-        <a href="{{article.url}}" target="_blank">
-          <img class="card-img-top" src="{{article.urlToImage}}" alt="Image of {{article.title}}">
-        </a>
-        <div class="card-body">
-          <h4 class="card-title">{{article.title}}</h4>
-          <p class="metadata">- {{article.author}}</p>
-          <p class="metadata">Posted on {{article.publishedAt}}</p>
-          <hr>
-          <p>{{article.description|truncate(200)}}...
-            <a href="{{article.url}}" target="_blank">View Article on site</a>
-          </p>
+<div class="row">
+  <div class="header col-md-3" id="sidebar">
+    <a class="nav-link" href="/">
+    <img src="{{url_for('static', filename='/images/logo.png')}}"></a>
+    <br>
+    <h5>Find an article</h5>
+    <form class="form-group" id="myForm">
+      <input class="form-control mr-sm-2" type="text" name="article_query" placeholder="Search News" aria-label="Search"
+        style="background-color: transparent;" required><br>
+      <button class="btn my-2 my-sm-0" value="Submit" type="submit">Search</button>
+    </form>
+    <br>
+    <div>
+      <ul class="navbar-nav ml-auto">
+        <li class="nav-item active">
+          <a class="nav-link" href="/" style="color: black;">Home <span class="sr-only">(current)</span></a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="/topheadlines&40" style="color: black;">Top News</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="/everything&40" style="color: black;">All Stories</a>
+        </li>
+      </ul>
+    </div>
+  </div>
+  <div class="col-md-9">
+    <div class="container wrapper">
+      <div class="row text">
+        {% for article in articles%}
+        <div class="col-sm-6 col-md-4">
+          <div class="card shadow p-3 mb-5 bg-white rounded card">
+            <a href="{{article.url}}" target="_blank">
+              <img class="card-img-top" src="{{article.urlToImage}}" alt="Image of {{article.title}}">
+            </a>
+            <div class="card-body">
+              <h4 class="card-title">{{article.title}}</h4>
+              <p class="metadata">- {{article.author}}</p>
+              <p class="metadata">Posted on {{article.publishedAt}}</p>
+              <hr>
+              <p>{{article.description|truncate(200)}}...
+                <a href="{{article.url}}" target="_blank">View Article on site</a>
+              </p>
+            </div>
+          </div>
         </div>
+        {% endfor %}
       </div>
     </div>
-    {% endfor %}
   </div>
-</div>
-
-{% endblock %}
+  {% endblock %}

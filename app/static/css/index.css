@@ -1,5 +1,6 @@
 *{
   font-size:medium;
+  font-family: 'Montserrat', sans-serif;
 }
 #bg{
    background: hsla(208, 7%, 55%, 1);
@@ -13,13 +14,11 @@ background: -webkit-linear-gradient(90deg, hsla(208, 7%, 55%, 1) 0%, hsla(191, 5
 filter: progid: DXImageTransform.Microsoft.gradient( startColorstr="#858E96", endColorstr="#60696B", GradientType=1 );
 }
 #sidebar{
+  margin-top: 8em;
   width: 20em;
   height: 100%;
 }
-#carousel{
-  width: auto;
-  margin-bottom: 2em;
-}
+
 .nav-item{
   margin-left: 3em;
 }

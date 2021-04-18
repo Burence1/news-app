@@ -17,7 +17,6 @@ filter: progid: DXImageTransform.Microsoft.gradient( startColorstr="#858E96", en
   height: 100%;
 }
 #carousel{
-  height: 15em;
   width: auto;
   margin-bottom: 2em;
 }

@@ -46,7 +46,6 @@ def process_results(source_list):
 
     returns: list of resultant articles
   '''
-
   source_results = []
   for source_item in source_list:
     id = source_item.get('id')

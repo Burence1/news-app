@@ -1,17 +1,17 @@
 *{
-  font-size:medium;
+  font-size:small;
   font-family: 'Montserrat', sans-serif;
 }
 #bg{
-   background: hsla(208, 7%, 55%, 1);
+   background: hsla(186, 33%, 94%, 1);
 
-background: linear-gradient(90deg, hsla(208, 7%, 55%, 1) 0%, hsla(191, 5%, 40%, 1) 100%);
+background: linear-gradient(90deg, hsla(186, 33%, 94%, 1) 0%, hsla(216, 41%, 79%, 1) 100%);
 
-background: -moz-linear-gradient(90deg, hsla(208, 7%, 55%, 1) 0%, hsla(191, 5%, 40%, 1) 100%);
+background: -moz-linear-gradient(90deg, hsla(186, 33%, 94%, 1) 0%, hsla(216, 41%, 79%, 1) 100%);
 
-background: -webkit-linear-gradient(90deg, hsla(208, 7%, 55%, 1) 0%, hsla(191, 5%, 40%, 1) 100%);
+background: -webkit-linear-gradient(90deg, hsla(186, 33%, 94%, 1) 0%, hsla(216, 41%, 79%, 1) 100%);
 
-filter: progid: DXImageTransform.Microsoft.gradient( startColorstr="#858E96", endColorstr="#60696B", GradientType=1 );
+filter: progid: DXImageTransform.Microsoft.gradient( startColorstr="#ebf4f5", endColorstr="#b5c6e0", GradientType=1 );
 }
 #sidebar{
   margin-top: 8em;
@@ -51,4 +51,8 @@ filter: progid: DXImageTransform.Microsoft.gradient( startColorstr="#858E96", en
   display: flex;
   flex-direction: column;
   justify-content: center;
+}
+
+#art{
+  height: 35em;
 }

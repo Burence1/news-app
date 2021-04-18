@@ -13,7 +13,7 @@ def configure_request(app):
   global api_key,base_url,search_url,topheadline_url,article_url,everything_url
   api_key = app.config['NEWS_API_KEY']
   base_url = app.config["SOURCE_API_URL"]
-  article_url = app.config["EVERYTHING_SOURCE_URL"]
+  article_url = app.config["ARTICLE_SOURCE_URL"]
   topheadline_url = app.config["TOP_STORIES_URL"]
   everything_url = app.config["EVERYTHING_URL"]
   search_url = app.config["SEARCH_API_URL"]

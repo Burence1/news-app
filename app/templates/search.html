@@ -33,7 +33,7 @@
       <div class="row text">
         {% for article in articles%}
         <div class="col-sm-6 col-md-4">
-          <div class="card shadow p-3 mb-5 bg-white rounded card">
+          <div class="card shadow p-3 mb-5 bg-white rounded card" id="art">
             <a href="{{article.url}}" target="_blank">
               <img class="card-img-top" src="{{article.urlToImage}}" alt="Image of {{article.title}}">
             </a>

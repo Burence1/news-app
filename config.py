@@ -7,7 +7,7 @@ class Config:
   '''
 
   SOURCE_API_URL = 'https://newsapi.org/v2/sources?language=en&category={}&apiKey={}'
-  EVERYTHING_SOURCE_URL = 'https://newsapi.org/v2/everything?sources={}&pageSize={}&apiKey={}'
+  ARTICLE_SOURCE_URL = 'https://newsapi.org/v2/everything?sources={}&pageSize={}&apiKey={}'
   TOP_STORIES_URL = 'https://newsapi.org/v2/top-headlines?language=en&pageSize={}&apiKey={}'
   EVERYTHING_URL = 'https://newsapi.org/v2/everything?sources=bbc-news,al-jazeera-english,cnn,independent,google-news,the-telegraph,mashable,the-lad-bible,buzzfeed,bloomberg,engadget,espn,fortune&sortBy=publishedAt&pageSize={}&apiKey={}'
   SEARCH_API_URL = 'https://newsapi.org/v2/everything?q={}&language=en&sortBy=popularity&apiKey={}'

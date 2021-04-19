@@ -19,6 +19,9 @@
 * A user can select the top news to read the current top headlines
 * Users can select all stories to read all available stories
 
+## Prototyping
+{ A prototype of what the application replicates is viewable via: https://www.figma.com/file/JoLfQcmPAUznkUsA6ruCFT/Untitled?node-id=0%3A1 }
+
 ## Known Bugs
 {The Api key is limited to a few requests per 24 hours}
 
@@ -33,6 +36,7 @@
 * fontsawesome
 * flask
 * heroku
+* Figma prototyping
 
 ## Support and Contact details
 {Incase of any issues or need to contribute to the project, you can reach me via;

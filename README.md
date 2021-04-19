@@ -1,5 +1,5 @@
 # NEWS BYTES
-#### {A python=flask application that displays universal news articles courtesy of NEWS-API}, {19-April-2021}
+#### {A python-flask application that displays universal news articles courtesy of NEWS-API}, {19-April-2021}
 #### {By Burens Omondi}
 ## Description
 {The News Bytes app consumes the News Api to display universal news articles from multiple sources and multiple categories}
